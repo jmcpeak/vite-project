@@ -11,6 +11,7 @@ export default {
       },
     },
   },
+  plugins: [react()],
   resolve: {
     alias: {
       consts: resolve(__dirname, 'src/consts.js'),
@@ -18,5 +19,9 @@ export default {
       './runtimeConfig': './runtimeConfig.browser', // <-- AWS SDK
     },
   },
-  plugins: [react()],
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.js',
+  },
 };

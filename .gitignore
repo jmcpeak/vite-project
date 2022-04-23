@@ -53,3 +53,4 @@ amplifytools.xcconfig
 /.idea/codeStyles/codeStyleConfig.xml
 /.idea/git_toolbox_prj.xml
 /.idea/codeStyles/Project.xml
+/.idea/jsLinters/eslint.xml

@@ -7,6 +7,7 @@ export default {
     alias: {
       consts: resolve(__dirname, 'src/consts.js'),
       hooks: resolve(__dirname, 'src/hooks/index.js'),
+      './runtimeConfig': './runtimeConfig.browser',
     },
   },
   plugins: [react()],

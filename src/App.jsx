@@ -1,32 +1,35 @@
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import logo from "./logo.svg";
-import "./App.css";
+import { ThemeProvider } from '@mui/material/styles';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+import './App.css';
+import logo from './logo.svg';
+import useToggleTheme from './useToggleTheme';
+import { BottomNavigation, LeftNavigation } from './Navigation';
+
+Amplify.configure(config);
 
 function App() {
+  const [theme, mode, handleToggleTheme] = useToggleTheme();
+
   return (
-    <Parallax pages={2}>
-      <ParallaxLayer speed={1.0}>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        </div>
-      </ParallaxLayer>
-      <ParallaxLayer speed={0.5}>
-        <h2>Hi there</h2>
-      </ParallaxLayer>
-    </Parallax>
+    <ThemeProvider theme={theme}>
+      <BottomNavigation mode={mode} onToggleTheme={handleToggleTheme} />
+      <LeftNavigation mode={mode} onToggleTheme={handleToggleTheme} />
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </ThemeProvider>
   );
 }
 

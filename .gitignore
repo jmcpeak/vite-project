@@ -49,3 +49,7 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+/.idea/aws.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/git_toolbox_prj.xml
+/.idea/codeStyles/Project.xml

@@ -10,6 +10,11 @@
       "StackName": "amplify-viteproject-dev-101331",
       "StackId": "arn:aws:cloudformation:us-east-1:010855546444:stack/amplify-viteproject-dev-101331/b47cf900-c328-11ec-bd5e-0e9aeffbc775",
       "AmplifyAppId": "d156czmglpniny"
+    },
+    "categories": {
+      "auth": {
+        "viteprojectf405cefc": {}
+      }
     }
   }
 }
